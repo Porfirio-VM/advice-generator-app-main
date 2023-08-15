@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    --bg-color: 218, 23%, 16%;
+    --primary-color: 217, 19%, 24%;
+
+    --primary-font-color: 193, 38%, 86%;
+    --secondary-font-color: 150, 100%, 66%;
+
+    --primary-font-size: 28px;
+}
+*{
+    font-family: 'Manrope',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    display: block;
+}
+body{
+    background-color: hsl(var(--bg-color));
+    min-height: 100vh;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    flex-direction: column;
+    gap: 1em;
+    width: 35%;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    background-color: hsl(var(--primary-color));
+}
+p{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: hsl(var(--secondary-font-color));
+    letter-spacing: .2em;
+}
+h2{
+    color: hsl(var(--primary-font-color));
+    font-size: 28px;
+}
+.container__button{
+    cursor: pointer;
+    background-color: hsl(var(--secondary-font-color));
+    padding: .7rem;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    bottom: 1%; /* Coloca el botón a la mitad fuera del contenedor */
+    left: 50%; /* Coloca el botón en el centro horizontal */
+    transform: translate(-50%, 50%); /* Ajusta la posición vertical */
+    transition: 1s;
+}
+.container__button:hover{
+    box-shadow: 0 0 30px hsl(var(--secondary-font-color));
+}
+.space{
+    margin: 1rem 0;
+}
