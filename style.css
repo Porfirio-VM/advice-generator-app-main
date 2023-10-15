@@ -1,67 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
 :root{
-    --bg-color: 218, 23%, 16%;
-    --primary-color: 217, 19%, 24%;
-
-    --primary-font-color: 193, 38%, 86%;
-    --secondary-font-color: 150, 100%, 66%;
-
-    --primary-font-size: 28px;
+/*---Colors--- */
+/*-Primary-*/
+--light-cyan: hsl(193, 38%, 86%);
+--neon-green: hsl(150, 100%, 66%);
+/*-Neutral-*/
+--grayish-blue: hsl(217, 19%, 38%);
+--dark-grayish-blue: hsl(217, 19%, 24%);
+--dark-blue: hsl(218, 23%, 16%);
 }
+
 *{
-    font-family: 'Manrope',sans-serif;
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-img{
-    width: 100%;
-    display: block;
-}
-body{
-    background-color: hsl(var(--bg-color));
-    min-height: 100vh;
-}
+
 .flex{
+    font-family: Manrope, sans-serif;
     display: flex;
-    justify-content: center;
+}
+
+body{
+    background-color: var(--dark-blue);
+    height: 100vh;
     align-items: center;
+    justify-content: center;
 }
-.container{
-    position: relative;
+
+img{
+    max-width: 100%;
+}
+
+.advice-container{
     flex-direction: column;
-    gap: 1em;
-    width: 35%;
-    padding: 2rem;
-    border-radius: 12px;
+    gap: 1rem;
+    position: relative;
     text-align: center;
-    background-color: hsl(var(--primary-color));
+    border-radius: 10px;
+    width: 380px;
+    background-color: var(--dark-grayish-blue);
+    padding: 1.7rem;
+    
 }
-p{
-    font-size: 14px;
+
+.advice-container_title{
     text-transform: uppercase;
-    color: hsl(var(--secondary-font-color));
-    letter-spacing: .2em;
+    letter-spacing: 4px;
+    color: var(--neon-green);
 }
-h2{
-    color: hsl(var(--primary-font-color));
-    font-size: 28px;
+
+.advice-container_text{
+    font-size: 1.2rem;
+    color: var(--light-cyan);
 }
-.container__button{
+
+.advice-container_image{
+   margin-bottom: 1rem;
+}
+
+.advice-container_button{
+    background-color: var(--neon-green);
     cursor: pointer;
-    background-color: hsl(var(--secondary-font-color));
-    padding: .7rem;
-    border-radius: 100%;
     border: none;
     position: absolute;
-    bottom: 1%; /* Coloca el botón a la mitad fuera del contenedor */
-    left: 50%; /* Coloca el botón en el centro horizontal */
-    transform: translate(-50%, 50%); /* Ajusta la posición vertical */
-    transition: 1s;
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: .5rem;
+    transition: .5s;
 }
-.container__button:hover{
-    box-shadow: 0 0 30px hsl(var(--secondary-font-color));
+
+.advice-container_button:hover{
+    box-shadow: 0 0 20px var(--neon-green);
 }
-.space{
-    margin: 1rem 0;
+
+.advice-container_button img{
+    vertical-align: middle;
+    width: 20px;
 }
